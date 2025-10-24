@@ -2,7 +2,7 @@
 
 int main(){
     int ncasas, i;
-    char direcao[20], escolha[20];
+    char direcao[80], escolha[20];
     int pecas;
 
         printf("Movimento das peças de xadrez:\n");
@@ -26,7 +26,7 @@ int main(){
     printf("Quantas casas deseja mover: ");
     scanf ("%d", &ncasas);
 
-    printf("Para qual direção deseja se mover [direita, esquerda, cima, baixo, diagonal direita, diagonal esquerda]: ");
+    printf("Para qual direção deseja se mover [direita, esquerda, cima, baixo, diagonal direita, diagonal esquerda: ");
     scanf ("%s", direcao);
 
     if (pecas == 1){
@@ -38,17 +38,16 @@ int main(){
         } 
     } else if (pecas == 2){
         i = 1;
-        while (i <= ncasas)
+        do
         {
           printf("O bispo moveu para %s \n", direcao);
           i++;
-        }
+          
+        } while (i <= ncasas);
     } else if (pecas == 3){
-        i = 1;
-        while (i <= ncasas)
+        for (i = 1; i <= ncasas; i++)
         {
           printf("A rainha moveu para %s \n", direcao);
-          i++;
         }
     } 
 
